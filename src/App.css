@@ -1,0 +1,34 @@
+*{
+    box-sizing: border-box;    
+    margin: 0;
+    padding: 0; 
+    font-family : 'Roboto', sans-serif;  
+}
+
+
+.deque-logo{        
+    color: white;    
+    line-height: 50px;
+    padding-left: 15px;
+    font-size: 2rem;
+    width: 100%;
+    height: 50px;
+    background-color: #0177c8;
+}
+
+@media (max-width: 700px) { 
+    .deque-logo{
+        display: flex;
+        justify-content: center;
+    }    
+}
+
+
+
+
+
+
+
+
+
+

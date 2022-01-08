@@ -1,0 +1,14 @@
+
+.table {
+    margin-top: 40px;
+}
+
+.char-name:hover {
+    background-color: #0177c8;
+    transition : ease-in 0.2s;
+    cursor: pointer;
+}
+
+
+
+
