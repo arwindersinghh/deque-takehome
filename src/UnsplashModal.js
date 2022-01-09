@@ -1,10 +1,11 @@
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 
-const UnsplashModal = (props) => {    
+const UnsplashModal = ({hide, show}) => {    
     return (
       <Modal
-        {...props}
+        hide={hide}
+        show={show}
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         centered
@@ -18,7 +19,7 @@ const UnsplashModal = (props) => {
           <div style={{ display:"flex", justifyContent:"center" }}><img style={{ height: "400px", width: "600px"}} src="https://source.unsplash.com/random" alt="unsplash-random" /></div>
         </Modal.Body>
         <Modal.Footer>
-          <Button onClick={props.hide}>Close</Button>
+          <Button onClick={hide}>Close</Button>
         </Modal.Footer>
       </Modal>
     );

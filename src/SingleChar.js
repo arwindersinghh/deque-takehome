@@ -16,8 +16,7 @@ const SingleChar = ({char}) => {
             <h6 className="card-subtitle mb-2 text-muted"> Birthday : {char.birthday ? char.birthday : "unknown"} </h6>                    
         <p className="card-text">{char.deck}</p>
             <Button onClick={() => window.location.reload()}>Back</Button>
-        </div>  
-    <>
+        </div>      
       <Button variant="primary" onClick={() => setShowModal(true)}>
         Modal for random unrelated picture 
       </Button>
@@ -25,8 +24,7 @@ const SingleChar = ({char}) => {
       <UnsplashModal
         show={showModal}
         hide={() => setShowModal(false)}
-      />
-    </>      
+      />    
         </div>
     )
 }
