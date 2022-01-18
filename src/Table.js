@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import './Table.css'
 import SingleChar from './SingleChar';
+import Button from 'react-bootstrap/Button'
 
 
 const Table = () => {
@@ -53,11 +54,14 @@ const Table = () => {
   return (
     <div className="container">
         <div style={{ display : "flex", justifyContent:"space-evenly" }}>          
-        <button onClick={() => handleSort()} className="btn btn-info"> Sort{sort==="ASC" ? "↑" : "↓" } </button>
-        <select name="columns" onChange={(e) => setCategory(e.target.value)} value={category}>
+        <Button onClick={() => handleSort()} variant="dark"> Sort{sort==="ASC" ? "↑" : "↓" } </Button>
+        <div>
+        <label for="columns"> Sort By </label>
+        <select id="columns" name="columns" onChange={(e) => setCategory(e.target.value)} value={category}>                
             <option value="id">ID</option>
             <option value="name">Name</option>                        
         </select>
+        </div>
         </div>
       <table className="table table-striped table-dark">
         <thead>
